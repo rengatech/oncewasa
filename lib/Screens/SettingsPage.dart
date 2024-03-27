@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oncewasa/Screens/UpgradeProPage.dart';
+import 'package:oncewasa/Screens/PaymentMethods.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -32,7 +33,7 @@ class SettingsPage extends StatelessWidget {
                         backgroundImage: AssetImage('images/profile.png'),
                       ),
                     ),
-                    SizedBox(width: 10), // Add space between the profile icon and text
+                    SizedBox(width: 10), 
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -67,7 +68,7 @@ class SettingsPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20), // Adding space between the previous content and the new row
+              SizedBox(height: 20), 
               Row(
                 children: [
                   Text(
@@ -91,7 +92,7 @@ class SettingsPage extends StatelessWidget {
                 leading: Icon(Icons.person),
                 title: Row(
                   children: [
-                    SizedBox(width: 10), // Add space between the icon and text
+                    SizedBox(width: 10), 
                     Text(
                       'Personal Info',
                       style: TextStyle(
@@ -112,7 +113,7 @@ class SettingsPage extends StatelessWidget {
                 leading: Icon(Icons.payment),
                 title: Row(
                   children: [
-                    SizedBox(width: 10), // Add space between the icon and text
+                    SizedBox(width: 10), 
                     Text(
                       'Payment Methods',
                       style: TextStyle(
@@ -124,7 +125,10 @@ class SettingsPage extends StatelessWidget {
                 ),
                 trailing: Icon(Icons.arrow_forward_ios),
                 onTap: () {
-                  // Handle tap on Settings
+                 Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => PaymentMethodsPage()),
+                  );
                 },
               ),
                SizedBox(height: 16.0), 
@@ -133,7 +137,7 @@ class SettingsPage extends StatelessWidget {
                 leading: Icon(Icons.security),
                 title: Row(
                   children: [
-                    SizedBox(width: 10), // Add space between the icon and text
+                    SizedBox(width: 10), 
                     Text(
                       'Security',
                       style: TextStyle(
@@ -154,7 +158,7 @@ class SettingsPage extends StatelessWidget {
                 leading: Icon(Icons.language),
                 title: Row(
                   children: [
-                    SizedBox(width: 10), // Add space between the icon and text
+                    SizedBox(width: 10), 
                     Text(
                       'Language',
                       style: TextStyle(
@@ -191,7 +195,7 @@ class SettingsPage extends StatelessWidget {
                 leading: Icon(Icons.remove_red_eye),
                 title: Row(
                   children: [
-                    SizedBox(width: 10), // Add space between the icon and text
+                    SizedBox(width: 10), 
                     Text(
                       'Dark Mode',
                       style: TextStyle(
@@ -212,7 +216,7 @@ class SettingsPage extends StatelessWidget {
                 },
               
               ),
-               SizedBox(height: 20), // Adding space between the previous content and the new row
+               SizedBox(height: 20), 
               Row(
                 children: [
                   Text(
@@ -236,7 +240,7 @@ class SettingsPage extends StatelessWidget {
                 leading: Icon(Icons.follow_the_signs),
                 title: Row(
                   children: [
-                    SizedBox(width: 10), // Add space between the icon and text
+                    SizedBox(width: 10), 
                     Text(
                       'Follow us on Social Media',
                       style: TextStyle(
@@ -257,7 +261,7 @@ class SettingsPage extends StatelessWidget {
                 leading: Icon(Icons.help_center),
                 title: Row(
                   children: [
-                    SizedBox(width: 10), // Add space between the icon and text
+                    SizedBox(width: 10), 
                     Text(
                       'Help Center',
                       style: TextStyle(
@@ -278,7 +282,7 @@ class SettingsPage extends StatelessWidget {
                 leading: Icon(Icons.privacy_tip),
                 title: Row(
                   children: [
-                    SizedBox(width: 10), // Add space between the icon and text
+                    SizedBox(width: 10), 
                     Text(
                       'Privacy Policy',
                       style: TextStyle(
@@ -299,7 +303,7 @@ class SettingsPage extends StatelessWidget {
                 leading: Icon(Icons.inbox_outlined),
                 title: Row(
                   children: [
-                    SizedBox(width: 10), // Add space between the icon and text
+                    SizedBox(width: 10), 
                     Text(
                       'About OnceWasA',
                       style: TextStyle(
@@ -320,7 +324,7 @@ class SettingsPage extends StatelessWidget {
                 leading: Icon(Icons.logout_sharp,color: Colors.red,),
                 title: Row(
                   children: [
-                    SizedBox(width: 10), // Add space between the icon and text
+                    SizedBox(width: 10), 
                     Text(
                       'Logout',
                       style: TextStyle(
