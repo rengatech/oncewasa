@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:oncewasa/Screens/ReviewSummaryPage.dart';
+import 'package:oncewasa/Screens/AddNewPaymentPage.dart';
 
-class PaymentPage extends StatefulWidget {
+class PaymentMethodsPage extends StatefulWidget {
   @override
-  _PaymentPageState createState() => _PaymentPageState();
+  _PaymentMethodsPageState createState() => _PaymentMethodsPageState();
 }
 
-class _PaymentPageState extends State<PaymentPage> {
+class _PaymentMethodsPageState extends State<PaymentMethodsPage> {
   String? selectedPaymentMethod;
 
   @override
@@ -27,7 +27,7 @@ class _PaymentPageState extends State<PaymentPage> {
             SizedBox(height: 30.0),
             buildPaymentMethod('images/apple.png', 'Apple Pay'),
             SizedBox(height: 30.0),
-            buildPaymentMethod('images/visa.png', '.... .... .... .... 5567'),
+               buildPaymentMethod('images/visa.png', '.... .... .... .... 5567'),
             SizedBox(height: 30.0),
             buildPaymentMethod('images/express.png', '.... .... .... .... 7864'),
             SizedBox(height: 100.0),
@@ -41,7 +41,7 @@ class _PaymentPageState extends State<PaymentPage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ReviewSummaryPage(),
+                    builder: (context) => AddNewPaymentPage(),
                   ),
                 );
               },
@@ -54,8 +54,8 @@ class _PaymentPageState extends State<PaymentPage> {
               child: Padding(
                 padding: EdgeInsets.symmetric(vertical: 12, horizontal: 150),
                 child: Text(
-                  'Continue',
-                  style: TextStyle(fontSize: 18, color: Colors.white),
+                  'Add New Payment',
+                  style: TextStyle(fontSize: 10, color: Colors.white),
                 ),
               ),
             ),
@@ -80,7 +80,7 @@ class _PaymentPageState extends State<PaymentPage> {
             height: 90,
             decoration: BoxDecoration(
               color: const Color(0xFFFAFAFA),
-              borderRadius: BorderRadius.circular(8.0),
+              borderRadius: BorderRadius.circular(10.0),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -90,7 +90,7 @@ class _PaymentPageState extends State<PaymentPage> {
                   child: Image.asset(
                     imageAsset,
                     width: 50,
-                    height: 50,
+                    height: 30,
                   ),
                 ),
                 SizedBox(width: 10),
@@ -102,23 +102,15 @@ class _PaymentPageState extends State<PaymentPage> {
                   ),
                 ),
                 Spacer(),
-                Radio(
-                  fillColor: MaterialStateColor.resolveWith(
-                    (Set<MaterialState> states) {
-                      if (states.contains(MaterialState.selected)) {
-                        return Color(0xFF9610FF);
-                      }
-                      return Color(0xFF9610FF);
-                    },
-                  ),
-                  value: label,
-                  groupValue: selectedPaymentMethod,
-                  onChanged: (value) {
-                    setState(() {
-                      selectedPaymentMethod = value as String;
-                    });
-                  },
-                ),
+                 Text(
+                            "Connected",
+                            style: TextStyle(
+                              color: Color(0xFF9610FF),
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                           SizedBox(width: 20),
               ],
             ),
           ),
