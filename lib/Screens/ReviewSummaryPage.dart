@@ -6,7 +6,8 @@ class ReviewSummaryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Review Summary"),
+        title: Text("Review Summary",textAlign: TextAlign.center),
+         centerTitle: true,
         backgroundColor: Colors.white,
       ),
 

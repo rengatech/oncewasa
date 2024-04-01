@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:oncewasa/Screens/UpgradeProPage.dart';
 import 'package:oncewasa/Screens/PaymentMethods.dart';
+import 'package:oncewasa/Screens/SecurityPage.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -8,7 +9,8 @@ class SettingsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text('Settings'),
+        title: Text('Settings',textAlign: TextAlign.center),
+         centerTitle: true,
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -149,7 +151,10 @@ class SettingsPage extends StatelessWidget {
                 ),
                 trailing: Icon(Icons.arrow_forward_ios),
                 onTap: () {
-                  // Handle tap on Settings
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SecurityPage()),
+                  );
                 },
               ),
                 SizedBox(height: 16.0), 
@@ -210,6 +215,9 @@ class SettingsPage extends StatelessWidget {
                   onChanged: (value) {
                     // Handle toggling dark mode
                   },
+                   activeColor: Color(0xFF9610FF), 
+                 inactiveThumbColor: Colors.white,
+                inactiveTrackColor: Colors.grey[300],
                 ),
                 onTap: () {
                   // Handle tap on Dark Mode
