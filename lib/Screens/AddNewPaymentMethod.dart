@@ -13,7 +13,8 @@ class _AddNewPaymentMethodState extends State<AddNewPaymentMethod> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Select Payment Method"),
+        title: Text("Select Payment Method",textAlign: TextAlign.center),
+         centerTitle: true,
         backgroundColor: Colors.white,
       ),
       body: Padding(

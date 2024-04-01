@@ -7,7 +7,8 @@ class ContentsPage2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("Contents"),
+        title: Text("Contents",textAlign: TextAlign.center),
+         centerTitle: true,
       ),
       backgroundColor: Colors.white,
       body: Padding(

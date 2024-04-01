@@ -12,7 +12,8 @@ class _PlanPageState extends State<PlanPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Choose Your Plan"),
+        title: Text("Choose Your Plan",textAlign: TextAlign.center),
+         centerTitle: true,
         backgroundColor: Colors.white,
       ),
       body: Padding(

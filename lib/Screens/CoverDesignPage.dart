@@ -15,7 +15,8 @@ class CoverDesignPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("Cover Designs"),
+        title: Text("Cover Designs",textAlign: TextAlign.center),
+         centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 0),

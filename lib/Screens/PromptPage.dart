@@ -7,7 +7,8 @@ class PromptPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Prompt For Cover Design'),
+        title: Text('Prompt For Cover Design',textAlign: TextAlign.center),
+         centerTitle: true,
         backgroundColor: Colors.white,
       ),
      

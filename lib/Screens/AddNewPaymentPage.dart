@@ -17,7 +17,8 @@ class _AddNewPaymentPageState extends State<AddNewPaymentPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add New Payment"),
+        title: Text("Add New Payment",textAlign: TextAlign.center),
+         centerTitle: true,
         backgroundColor: Colors.white,
       automaticallyImplyLeading: false, 
         actions: [

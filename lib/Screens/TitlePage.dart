@@ -7,7 +7,8 @@ class TitlePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Title for Page'),
+        title: Text('Title for Page',textAlign: TextAlign.center),
+         centerTitle: true,
         backgroundColor: Colors.white,
       ),
 
