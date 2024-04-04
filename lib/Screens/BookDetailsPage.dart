@@ -7,7 +7,7 @@ class BookDetailsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("Add Details",textAlign: TextAlign.center),
+        title: Text("Add Details",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
       ),
       backgroundColor: Colors.white,

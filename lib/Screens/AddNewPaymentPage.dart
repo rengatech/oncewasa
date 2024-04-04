@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oncewasa/Screens/AddNewPaymentMethod.dart';
-import 'package:oncewasa/Screens/SettingsPage.dart';
+import 'package:oncewasa/Screens/Settings/SettingsPage.dart';
 
 class AddNewPaymentPage extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class _AddNewPaymentPageState extends State<AddNewPaymentPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add New Payment",textAlign: TextAlign.center),
+        title: Text("Add New Payment",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
         backgroundColor: Colors.white,
       automaticallyImplyLeading: false, 
