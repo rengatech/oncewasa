@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:oncewasa/Screens/SettingsPage.dart';
+import 'package:oncewasa/Screens/Settings/SettingsPage.dart';
 
 class ReviewSummaryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Review Summary",textAlign: TextAlign.center),
+        title: Text("Review Summary",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
         backgroundColor: Colors.white,
       ),

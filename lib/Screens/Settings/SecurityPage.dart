@@ -17,7 +17,7 @@ class _SecurityPageState extends State<SecurityPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text('Security', textAlign: TextAlign.center),
+        title: Text('Security', textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
       ),
       backgroundColor: Colors.white,

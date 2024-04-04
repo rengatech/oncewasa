@@ -15,7 +15,7 @@ class LastPage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("Last Page Design",textAlign: TextAlign.center),
+        title: Text("Last Page Design",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
       ),
       body: Padding(

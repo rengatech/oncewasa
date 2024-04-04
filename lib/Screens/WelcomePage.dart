@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:oncewasa/Screens/BookDetailsPage.dart';
-import 'package:oncewasa/Screens/SettingsPage.dart';
+import 'package:oncewasa/Screens/Settings/SettingsPage.dart';
 
 class WelcomePage extends StatelessWidget {
   @override

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:oncewasa/Screens/UpgradeProPage.dart';
 import 'package:oncewasa/Screens/PaymentMethods.dart';
-import 'package:oncewasa/Screens/SecurityPage.dart';
+import 'package:oncewasa/Screens/Settings/SecurityPage.dart';
+import 'package:oncewasa/Screens/Settings/LanguagePage.dart';
+import 'package:oncewasa/Screens/Settings/FollowUpPage.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
@@ -9,7 +11,7 @@ class SettingsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text('Settings',textAlign: TextAlign.center),
+        title: Text('Settings',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
       ),
       backgroundColor: Colors.white,
@@ -190,7 +192,10 @@ class SettingsPage extends StatelessWidget {
                   ],
                 ),
                 onTap: () {
-                  // Handle tap on Settings
+                     Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LanguagePage()),
+                  );
                 },
               
               ),
@@ -260,7 +265,10 @@ class SettingsPage extends StatelessWidget {
                 ),
                 trailing: Icon(Icons.arrow_forward_ios),
                 onTap: () {
-                  // Handle tap on Profile
+                 Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => FollowUpPage()),
+                  );
                 },
               ),
               SizedBox(height: 16.0), 
