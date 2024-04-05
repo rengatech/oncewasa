@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:oncewasa/Screens/HomePage.dart'; // Import the NextPage
 
 class LoadingScreen extends StatefulWidget {
+  const LoadingScreen({super.key});
+
   @override
   _LoadingScreenState createState() => _LoadingScreenState();
 }
@@ -13,13 +15,13 @@ class _LoadingScreenState extends State<LoadingScreen> {
     _mockData().then((_) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomePage()),
+        MaterialPageRoute(builder: (context) => const HomePage()),
       );
     });
   }
 
   Future<void> _mockData() async {
-    await Future.delayed(Duration(seconds: 5));
+    await Future.delayed(const Duration(seconds: 5));
   }
 
   @override
@@ -34,8 +36,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
               height: 700,
               width: 700,
             ),
-            SizedBox(height: 20),
-            CircularProgressIndicator(
+            const SizedBox(height: 20),
+            const CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF9610FF)),
               strokeWidth: 7.0,
             ),

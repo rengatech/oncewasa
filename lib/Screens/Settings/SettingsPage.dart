@@ -4,20 +4,23 @@ import 'package:oncewasa/Screens/PaymentMethods.dart';
 import 'package:oncewasa/Screens/Settings/SecurityPage.dart';
 import 'package:oncewasa/Screens/Settings/LanguagePage.dart';
 import 'package:oncewasa/Screens/Settings/FollowUpPage.dart';
+import 'package:oncewasa/Screens/Settings/HelpCenterPage.dart';
 
 class SettingsPage extends StatelessWidget {
+  const SettingsPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text('Settings',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+        title: const Text('Settings',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -33,12 +36,12 @@ class SettingsPage extends StatelessWidget {
                         //   MaterialPageRoute(builder: (context) => SettingsPage()),
                         // );
                       },
-                      child: CircleAvatar(
+                      child: const CircleAvatar(
                         backgroundImage: AssetImage('images/profile.png'),
                       ),
                     ),
-                    SizedBox(width: 10), 
-                    Column(
+                    const SizedBox(width: 10), 
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
@@ -55,16 +58,16 @@ class SettingsPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => UpgradeProPage()),
+                    MaterialPageRoute(builder: (context) => const UpgradeProPage()),
                   );
                 },
                 child: Container(
-                  margin: EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(10),
                   width: double.infinity,
                   child: Image.asset(
                     'images/upgrade.png',
@@ -72,8 +75,8 @@ class SettingsPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20), 
-              Row(
+              const SizedBox(height: 20), 
+              const Row(
                 children: [
                   Text(
                     'General',
@@ -89,12 +92,12 @@ class SettingsPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20), 
+              const SizedBox(height: 20), 
               // List of items
               ListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                leading: Icon(Icons.person),
-                title: Row(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                leading: const Icon(Icons.person),
+                title: const Row(
                   children: [
                     SizedBox(width: 10), 
                     Text(
@@ -106,16 +109,16 @@ class SettingsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                trailing: Icon(Icons.arrow_forward_ios),
+                trailing: const Icon(Icons.arrow_forward_ios),
                 onTap: () {
                   // Handle tap on Profile
                 },
               ),
-              SizedBox(height: 16.0), 
+              const SizedBox(height: 16.0), 
               ListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                leading: Icon(Icons.payment),
-                title: Row(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                leading: const Icon(Icons.payment),
+                title: const Row(
                   children: [
                     SizedBox(width: 10), 
                     Text(
@@ -127,19 +130,19 @@ class SettingsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                trailing: Icon(Icons.arrow_forward_ios),
+                trailing: const Icon(Icons.arrow_forward_ios),
                 onTap: () {
                  Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => PaymentMethodsPage()),
+                    MaterialPageRoute(builder: (context) => const PaymentMethodsPage()),
                   );
                 },
               ),
-               SizedBox(height: 16.0), 
+               const SizedBox(height: 16.0), 
               ListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                leading: Icon(Icons.security),
-                title: Row(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                leading: const Icon(Icons.security),
+                title: const Row(
                   children: [
                     SizedBox(width: 10), 
                     Text(
@@ -151,19 +154,19 @@ class SettingsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                trailing: Icon(Icons.arrow_forward_ios),
+                trailing: const Icon(Icons.arrow_forward_ios),
                 onTap: () {
                 Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SecurityPage()),
+                    MaterialPageRoute(builder: (context) => const SecurityPage()),
                   );
                 },
               ),
-                SizedBox(height: 16.0), 
+                const SizedBox(height: 16.0), 
               ListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                leading: Icon(Icons.language),
-                title: Row(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                leading: const Icon(Icons.language),
+                title: const Row(
                   children: [
                     SizedBox(width: 10), 
                     Text(
@@ -175,7 +178,7 @@ class SettingsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                  trailing: Row(
+                  trailing: const Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                   // Add space between the arrow icon and text
@@ -194,16 +197,16 @@ class SettingsPage extends StatelessWidget {
                 onTap: () {
                      Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => LanguagePage()),
+                    MaterialPageRoute(builder: (context) => const LanguagePage()),
                   );
                 },
               
               ),
-                SizedBox(height: 16.0), 
+                const SizedBox(height: 16.0), 
               ListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                leading: Icon(Icons.remove_red_eye),
-                title: Row(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                leading: const Icon(Icons.remove_red_eye),
+                title: const Row(
                   children: [
                     SizedBox(width: 10), 
                     Text(
@@ -220,7 +223,7 @@ class SettingsPage extends StatelessWidget {
                   onChanged: (value) {
                     // Handle toggling dark mode
                   },
-                   activeColor: Color(0xFF9610FF), 
+                   activeColor: const Color(0xFF9610FF), 
                  inactiveThumbColor: Colors.white,
                 inactiveTrackColor: Colors.grey[300],
                 ),
@@ -229,8 +232,8 @@ class SettingsPage extends StatelessWidget {
                 },
               
               ),
-               SizedBox(height: 20), 
-              Row(
+               const SizedBox(height: 20), 
+              const Row(
                 children: [
                   Text(
                     'About',
@@ -246,12 +249,12 @@ class SettingsPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20), 
+              const SizedBox(height: 20), 
               // List of items
               ListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                leading: Icon(Icons.follow_the_signs),
-                title: Row(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                leading: const Icon(Icons.follow_the_signs),
+                title: const Row(
                   children: [
                     SizedBox(width: 10), 
                     Text(
@@ -263,19 +266,19 @@ class SettingsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                trailing: Icon(Icons.arrow_forward_ios),
+                trailing: const Icon(Icons.arrow_forward_ios),
                 onTap: () {
                  Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => FollowUpPage()),
+                    MaterialPageRoute(builder: (context) => const FollowUpPage()),
                   );
                 },
               ),
-              SizedBox(height: 16.0), 
+              const SizedBox(height: 16.0), 
               ListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                leading: Icon(Icons.help_center),
-                title: Row(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                leading: const Icon(Icons.help_center),
+                title: const Row(
                   children: [
                     SizedBox(width: 10), 
                     Text(
@@ -287,16 +290,19 @@ class SettingsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                trailing: Icon(Icons.arrow_forward_ios),
+                trailing: const Icon(Icons.arrow_forward_ios),
                 onTap: () {
-                  // Handle tap on Settings
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HelpCenterPage()),
+                  );
                 },
               ),
-               SizedBox(height: 16.0), 
+               const SizedBox(height: 16.0), 
               ListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                leading: Icon(Icons.privacy_tip),
-                title: Row(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                leading: const Icon(Icons.privacy_tip),
+                title: const Row(
                   children: [
                     SizedBox(width: 10), 
                     Text(
@@ -308,16 +314,16 @@ class SettingsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                trailing: Icon(Icons.arrow_forward_ios),
+                trailing: const Icon(Icons.arrow_forward_ios),
                 onTap: () {
                   // Handle tap on Settings
                 },
               ),
-                SizedBox(height: 16.0), 
+                const SizedBox(height: 16.0), 
               ListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                leading: Icon(Icons.inbox_outlined),
-                title: Row(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                leading: const Icon(Icons.inbox_outlined),
+                title: const Row(
                   children: [
                     SizedBox(width: 10), 
                     Text(
@@ -329,16 +335,16 @@ class SettingsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                trailing: Icon(Icons.arrow_forward_ios),
+                trailing: const Icon(Icons.arrow_forward_ios),
                 onTap: () {
                   // Handle tap on Settings
                 },
               ),
-                SizedBox(height: 16.0), 
+                const SizedBox(height: 16.0), 
               ListTile(
-                contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                leading: Icon(Icons.logout_sharp,color: Colors.red,),
-                title: Row(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 16.0),
+                leading: const Icon(Icons.logout_sharp,color: Colors.red,),
+                title: const Row(
                   children: [
                     SizedBox(width: 10), 
                     Text(
@@ -350,7 +356,7 @@ class SettingsPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                trailing: Icon(Icons.arrow_forward_ios),
+                trailing: const Icon(Icons.arrow_forward_ios),
                 onTap: () {
                   // Handle tap on Settings
                 },

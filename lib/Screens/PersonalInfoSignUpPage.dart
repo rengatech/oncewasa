@@ -3,6 +3,8 @@ import 'package:oncewasa/Screens/PersonalInfo.dart';
 
 
 class personalInfoSignUpPage extends StatelessWidget {
+  const personalInfoSignUpPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +12,7 @@ class personalInfoSignUpPage extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -18,13 +20,13 @@ class personalInfoSignUpPage extends StatelessWidget {
             children: [
               RichText(
                 text: TextSpan(
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
                   children: [
-                    TextSpan(
+                    const TextSpan(
                       text: 'Hello there ',
                     ),
                     WidgetSpan(
@@ -37,15 +39,15 @@ class personalInfoSignUpPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 16.0),
-              Text(
+              const SizedBox(height: 16.0),
+              const Text(
                 'Please enter your Email & Password to create an account.',
                 style: TextStyle(
                   fontSize: 18,
                 ),
               ),
-              SizedBox(height: 40),
-              TextField(
+              const SizedBox(height: 40),
+              const TextField(
                 decoration: InputDecoration(
                   labelText: 'Email',
                   hintText: 'Email',
@@ -55,8 +57,8 @@ class personalInfoSignUpPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
-              TextField(
+              const SizedBox(height: 20),
+              const TextField(
                 decoration: InputDecoration(
                   labelText: 'Password',
                   hintText: 'Password',
@@ -66,22 +68,22 @@ class personalInfoSignUpPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 children: [
                   Checkbox(
                     value: false,
                     onChanged: (bool? value) {},
-                    activeColor: Color(0xFF9610FF),
+                    activeColor: const Color(0xFF9610FF),
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     checkColor: Colors.white,
                     fillColor: MaterialStateProperty.resolveWith((states) {
                       if (states.contains(MaterialState.selected)) {
-                        return Color(0xFF9610FF);
+                        return const Color(0xFF9610FF);
                       }
                       return null;
                     }),
-                    side: BorderSide(
+                    side: const BorderSide(
                       color: Color(0xFF9610FF),
                       width: 3.0,
                     ),
@@ -89,7 +91,7 @@ class personalInfoSignUpPage extends StatelessWidget {
                   Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'I agree OnceWasA ',
                     style: TextStyle(
                       color: Colors.black,
@@ -101,7 +103,7 @@ class personalInfoSignUpPage extends StatelessWidget {
                     onTap: () {
                       // Navigate to sign-in page
                     },
-                    child: Text(
+                    child: const Text(
                       'Terms & Conditions',
                       style: TextStyle(
                         color: Color(0xFF9610FF),
@@ -114,16 +116,16 @@ class personalInfoSignUpPage extends StatelessWidget {
               ),
                 ],
               ),
-              SizedBox(height: 50),
-              Divider(
+              const SizedBox(height: 20),
+              const Divider(
                 height: 0.5,
-                color: const Color.fromARGB(255, 245, 242, 242),
+                color: Color.fromARGB(255, 245, 242, 242),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'Already have an account? ',
                     style: TextStyle(
                       color: Colors.black,
@@ -135,7 +137,7 @@ class personalInfoSignUpPage extends StatelessWidget {
                     onTap: () {
                       // Navigate to sign-in page
                     },
-                    child: Text(
+                    child: const Text(
                       'Sign in',
                       style: TextStyle(
                         color: Color(0xFF9610FF),
@@ -146,8 +148,8 @@ class personalInfoSignUpPage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 30),
-              Center(
+              const SizedBox(height: 30),
+              const Center(
                 child: Text(
                   'Or continue with',
                   style: TextStyle(
@@ -157,14 +159,14 @@ class personalInfoSignUpPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50),
                       ),
@@ -173,7 +175,7 @@ class personalInfoSignUpPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Image.asset(
                         "images/google.png",
-                        width: 30,
+                        width: 10,
                         height: 50,
                       ),
                     ),
@@ -181,15 +183,15 @@ class personalInfoSignUpPage extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50),
                       ),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        height: 50,
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        height: 10,
                         child: Icon(
                           Icons.apple,
                           color: Colors.black,
@@ -200,7 +202,7 @@ class personalInfoSignUpPage extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50),
                       ),
@@ -209,7 +211,7 @@ class personalInfoSignUpPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Image.asset(
                         "images/facebook.png",
-                        width: 30,
+                        width: 10,
                         height: 50,
                       ),
                     ),
@@ -217,7 +219,7 @@ class personalInfoSignUpPage extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(50),
                       ),
@@ -226,32 +228,32 @@ class personalInfoSignUpPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Image.asset(
                         "images/twitter.png",
-                        width: 30,
+                        width: 10,
                         height: 50,
                       ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 80),
-              Divider(
+              const SizedBox(height: 20),
+              const Divider(
                 height: 0.5,
-                color: const Color.fromARGB(255, 245, 242, 242),
+                color: Color.fromARGB(255, 245, 242, 242),
               ),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
               Center(
                 child: ElevatedButton(
                   onPressed: () {
                     _showSignInPopup(context);
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF9610FF),
+                    backgroundColor: const Color(0xFF9610FF),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(90),
                     ),
                   ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 150),
+                  child: const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 100),
                     child: Text(
                       'Sign in',
                       style: TextStyle(fontSize: 18, color: Colors.white),
@@ -277,7 +279,7 @@ class personalInfoSignUpPage extends StatelessWidget {
           title: Center(
             child: Image.asset("images/popup.png"),
           ),
-          content: Container(
+          content: const SizedBox(
             height: 180.0,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -316,11 +318,11 @@ class personalInfoSignUpPage extends StatelessWidget {
       },
     );
 
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => PersonalInfo(),
+            builder: (context) => const PersonalInfo(),
           ),
         );
     });

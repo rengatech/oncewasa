@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:oncewasa/Screens/CoverDesignPage.dart';
+import 'package:oncewasa/Screens/BookGeneration/CoverDesignPage.dart';
 
 class ContentsPage2 extends StatelessWidget {
+  const ContentsPage2({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("Contents",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+        title: const Text("Contents",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
       ),
       backgroundColor: Colors.white,
@@ -16,21 +18,21 @@ class ContentsPage2 extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "What will your book be about?",
               style: TextStyle(
                 fontSize: 15,
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Container(
               decoration: BoxDecoration(
                 color: const Color.fromARGB(255, 241, 240, 240), 
                 borderRadius: BorderRadius.circular(5.0),
                 border: Border.all(color: const Color.fromARGB(255, 222, 221, 221)), 
               ),
-              child: TextField(
+              child: const TextField(
                 maxLines: null,
                 decoration: InputDecoration(
                   hintText: " Description...",
@@ -39,12 +41,12 @@ class ContentsPage2 extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 500.0),
-            Divider(
+            const SizedBox(height: 200.0),
+            const Divider(
               height: 0.5,
-              color: const Color.fromARGB(255, 245, 242, 242),
+              color: Color.fromARGB(255, 245, 242, 242),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -55,12 +57,12 @@ class ContentsPage2 extends StatelessWidget {
                     );
               },
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Color(0xFF9610FF),
+                  color: const Color(0xFF9610FF),
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(

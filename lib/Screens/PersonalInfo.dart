@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:oncewasa/Screens/WelcomePage.dart';
 
 class PersonalInfo extends StatefulWidget {
+  const PersonalInfo({super.key});
+
   @override
   _PersonalInfoState createState() => _PersonalInfoState();
 }
@@ -20,15 +22,16 @@ class _PersonalInfoState extends State<PersonalInfo> {
       appBar: AppBar(
         backgroundColor: Colors.white,
       ),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
+      body: SingleChildScrollView(
+        child:Padding(
+        padding: const EdgeInsets.all(16.0),
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               RichText(
-                text: TextSpan(
+                text: const TextSpan(
                   style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
@@ -48,14 +51,14 @@ class _PersonalInfoState extends State<PersonalInfo> {
                   ],
                 ),
               ),
-              SizedBox(height: 16.0),
-              Text(
+              const SizedBox(height: 16.0),
+              const Text(
                 'Please enter your profile. Don\'t worry, only you can see your personal data. No one else will be able to see it. Or you can skip it for now.',
                 style: TextStyle(
                   fontSize: 18,
                 ),
               ),
-              SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
               Center(
                 child: Stack(
                   children: [
@@ -66,7 +69,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                         shape: BoxShape.circle,
                         color: Colors.grey[300],
                       ),
-                      child: Icon(Icons.account_circle, size: 80, color: Colors.white),
+                      child: const Icon(Icons.account_circle, size: 80, color: Colors.white),
                     ),
                     Positioned.fill(
                       child: Align(
@@ -74,13 +77,13 @@ class _PersonalInfoState extends State<PersonalInfo> {
                         child: Container(
                           width: 20,
                           height: 20,
-                          padding: EdgeInsets.all(1.0),
-                          decoration: BoxDecoration(
+                          padding: const EdgeInsets.all(1.0),
+                          decoration: const BoxDecoration(
                             shape: BoxShape.rectangle,
                             color: Color(0xFF9610FF),
                           ),
                           child: IconButton(
-                            icon: Icon(Icons.edit, color: Colors.white, size: 10,),
+                            icon: const Icon(Icons.edit, color: Colors.white, size: 10,),
                             onPressed: () {},
                           ),
                         ),
@@ -89,8 +92,8 @@ class _PersonalInfoState extends State<PersonalInfo> {
                   ],
                 ),
               ),
-              SizedBox(height: 40),
-              TextField(
+              const SizedBox(height: 40),
+              const TextField(
                 decoration: InputDecoration(
                   labelText: 'Full Name',
                   hintText: 'Full Name',
@@ -98,8 +101,8 @@ class _PersonalInfoState extends State<PersonalInfo> {
                   contentPadding: EdgeInsets.symmetric(vertical: 25.0),
                 ),
               ),
-              SizedBox(height: 16.0),
-              TextField(
+              const SizedBox(height: 16.0),
+              const TextField(
                 decoration: InputDecoration(
                   labelText: 'Phone Number',
                   hintText: 'Phone Number',
@@ -111,8 +114,8 @@ class _PersonalInfoState extends State<PersonalInfo> {
                   contentPadding: EdgeInsets.symmetric(vertical: 25.0),
                 ),
               ),
-              SizedBox(height: 16.0),
-              TextField(
+              const SizedBox(height: 16.0),
+              const TextField(
                 decoration: InputDecoration(
                   labelText: 'Date Of Birth',
                   hintText: 'Date Of Birth',
@@ -124,14 +127,14 @@ class _PersonalInfoState extends State<PersonalInfo> {
                   contentPadding: EdgeInsets.symmetric(vertical: 25.0),
                 ),
               ),
-                 SizedBox(height: 30.0),
+                 const SizedBox(height: 30.0),
                 // Gender Label and Radio Buttons
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Gender',
                         style: TextStyle(
                           color: Colors.black,
@@ -148,9 +151,9 @@ class _PersonalInfoState extends State<PersonalInfo> {
                                 selectedGender = value.toString();
                               });
                             },
-                            activeColor: Color(0xFF9610FF),
+                            activeColor: const Color(0xFF9610FF),
                           ),
-                          Text('Male'),
+                          const Text('Male'),
                           Radio(
                             value: 'Female',
                             groupValue: selectedGender,
@@ -159,28 +162,28 @@ class _PersonalInfoState extends State<PersonalInfo> {
                                 selectedGender = value.toString();
                               });
                             },
-                            activeColor: Color(0xFF9610FF),
+                            activeColor: const Color(0xFF9610FF),
                           ),
-                          Text('Female'),
+                          const Text('Female'),
                         ],
                       ),
                     ],
                   ),
                 ),
-                SizedBox(height: 30.0),
+                const SizedBox(height: 30.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Material(
-                      color: Color.fromARGB(255, 234, 226, 240),
+                      color: const Color.fromARGB(255, 234, 226, 240),
                       borderRadius: BorderRadius.circular(50),
                       child: InkWell(
                         onTap: () {
                          _showSignInPopup(context);
                         },
                         child: Container(
-                          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 90),
-                          child: Text(
+                          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 90),
+                          child: const Text(
                             "Skip",
                             style: TextStyle(
                               color: Color(0xFF9610FF),
@@ -192,15 +195,15 @@ class _PersonalInfoState extends State<PersonalInfo> {
                       ),
                     ),
                       Material(
-                      color: Color(0xFF9610FF),
+                      color: const Color(0xFF9610FF),
                       borderRadius: BorderRadius.circular(50),
                       child: InkWell(
                         onTap: () {
                          _showSignInPopup(context);
                         },
                         child: Container(
-                          padding: EdgeInsets.symmetric(vertical: 15, horizontal: 80),
-                          child: Text(
+                          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 80),
+                          child: const Text(
                             "Continue",
                             style: TextStyle(
                               color: Colors.white,
@@ -220,6 +223,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
           ),
       ),
       ),
+      ),
       backgroundColor: Colors.white,
     );
   }
@@ -234,7 +238,7 @@ void _showSignInPopup(BuildContext context) {
         title: Center(
           child: Image.asset("images/Group.png"),
         ),
-        content: Container(
+        content: const SizedBox(
           height: 250.0,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -270,12 +274,12 @@ void _showSignInPopup(BuildContext context) {
   );
 
  
-  Future.delayed(Duration(seconds: 2), () {
+  Future.delayed(const Duration(seconds: 2), () {
 
   Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => WelcomePage(),
+        builder: (context) => const WelcomePage(),
       ),
     );
   });

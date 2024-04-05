@@ -3,6 +3,8 @@ import 'package:oncewasa/Screens/AddNewPaymentMethod.dart';
 import 'package:oncewasa/Screens/Settings/SettingsPage.dart';
 
 class AddNewPaymentPage extends StatefulWidget {
+  const AddNewPaymentPage({super.key});
+
   @override
   _AddNewPaymentPageState createState() => _AddNewPaymentPageState();
 }
@@ -17,7 +19,7 @@ class _AddNewPaymentPageState extends State<AddNewPaymentPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Add New Payment",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+        title: const Text("Add New Payment",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
         backgroundColor: Colors.white,
       automaticallyImplyLeading: false, 
@@ -25,10 +27,10 @@ class _AddNewPaymentPageState extends State<AddNewPaymentPage> {
           IconButton(
             onPressed: () {
               Navigator.pop(context,  MaterialPageRoute(
-                    builder: (context) => SettingsPage(),
+                    builder: (context) => const SettingsPage(),
                   ),);
             },
-            icon: Icon(Icons.close), 
+            icon: const Icon(Icons.close), 
             color: Colors.black,
           ),
         ],
@@ -44,7 +46,7 @@ class _AddNewPaymentPageState extends State<AddNewPaymentPage> {
                 ),
             TextFormField(
               controller: cardHolderNameController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Card Holder Name',
                 labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0, color: Colors.black),
                 contentPadding: EdgeInsets.symmetric(vertical: 25.0),
@@ -56,10 +58,10 @@ class _AddNewPaymentPageState extends State<AddNewPaymentPage> {
                 ),
               ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             TextFormField(
               controller: cardNumberController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Card Number',
                 hintText: 'xxxx xxxx xxxx xxxx',
                 labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0, color: Colors.black),
@@ -72,13 +74,13 @@ class _AddNewPaymentPageState extends State<AddNewPaymentPage> {
                 ),
               ),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Row(
               children: [
                 Expanded(
                   child: TextFormField(
                     controller: expiryDateController,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Expiry Date',
                       labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0, color: Colors.black),
                       contentPadding: EdgeInsets.symmetric(vertical: 25.0),
@@ -101,7 +103,7 @@ class _AddNewPaymentPageState extends State<AddNewPaymentPage> {
       builder: (BuildContext context, Widget? child) {
         return Theme(
           data: ThemeData.light().copyWith( 
-            colorScheme: ColorScheme.light(primary: Color(0xFF9610FF)), 
+            colorScheme: const ColorScheme.light(primary: Color(0xFF9610FF)), 
             dialogBackgroundColor: Colors.white, 
           ),
           child: child!,
@@ -114,14 +116,14 @@ class _AddNewPaymentPageState extends State<AddNewPaymentPage> {
       });
     }
   },
-  icon: Icon(Icons.calendar_today, color: Colors.black), 
+  icon: const Icon(Icons.calendar_today, color: Colors.black), 
 ),
               ],
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             TextFormField(
               controller: cvvController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'CVV',
                 labelStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.0, color: Colors.black),
                 contentPadding: EdgeInsets.symmetric(vertical: 25.0),
@@ -133,11 +135,11 @@ class _AddNewPaymentPageState extends State<AddNewPaymentPage> {
                 ),
               ),
             ),
-           SizedBox(height: 80),
-                Divider(
-                height: 0.5,color: const Color.fromARGB(255, 245, 242, 242),
+          //  const SizedBox(height: 20),
+                const Divider(
+                height: 0.5,color: Color.fromARGB(255, 245, 242, 242),
               ),
-              SizedBox(height: 16.0,),
+              const SizedBox(height: 16.0,),
               Center(
                 child:
             ElevatedButton(
@@ -145,18 +147,18 @@ class _AddNewPaymentPageState extends State<AddNewPaymentPage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => AddNewPaymentMethod(),
+                    builder: (context) => const AddNewPaymentMethod(),
                   ),
                 );
               },
               style: ElevatedButton.styleFrom(
-                primary: Color(0xFF9610FF),
+                backgroundColor: const Color(0xFF9610FF),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(90),
                 ),
               ),
-              child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 150),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 120),
                 child: Text(
                   'Add',
                   style: TextStyle(fontSize: 18, color: Colors.white),

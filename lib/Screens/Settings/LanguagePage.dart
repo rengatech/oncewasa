@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LanguagePage extends StatefulWidget {
+  const LanguagePage({super.key});
+
   @override
   _LanguagePageState createState() => _LanguagePageState();
 }
@@ -28,7 +30,7 @@ class _LanguagePageState extends State<LanguagePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text('Language', textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+        title: const Text('Language', textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
       ),
       backgroundColor: Colors.white,
@@ -36,8 +38,8 @@ class _LanguagePageState extends State<LanguagePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child:Row(
                 children: [
                   Text(
@@ -62,7 +64,7 @@ class _LanguagePageState extends State<LanguagePage> {
                 return ListTile(
                   title: Text(suggestedLanguages[index]),
                   trailing: selectedLanguage == suggestedLanguages[index]
-                      ? Icon(
+                      ? const Icon(
                           Icons.check,
                           color: Color(0xFF9610FF),
                           size: 30,
@@ -76,8 +78,8 @@ class _LanguagePageState extends State<LanguagePage> {
                 );
               },
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
             child:Row(
                 children: [
                   Text(
@@ -102,7 +104,7 @@ class _LanguagePageState extends State<LanguagePage> {
                 return ListTile(
                   title: Text(allLanguages[index]),
                   trailing: selectedLanguage == allLanguages[index]
-                      ? Icon(
+                      ? const Icon(
                           Icons.check,
                           color: Color(0xFF9610FF),
                            size: 30,

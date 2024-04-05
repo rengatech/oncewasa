@@ -3,6 +3,8 @@ import 'package:oncewasa/Screens/SignupScreen.dart';
 import 'package:oncewasa/Screens/PersonalInfoSignUpPage.dart';
 
 class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
   @override
   _LoginPageState createState() => _LoginPageState();
 }
@@ -18,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
         color: Colors.white,
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(children: [
           Expanded(
             child: Stack(alignment: Alignment.bottomCenter, children: [
@@ -38,8 +40,8 @@ class _LoginPageState extends State<LoginPage> {
                           width: 250,
                           height: 250,
                         ),
-                        SizedBox(height: 20),
-                        Text(
+                        const SizedBox(height: 20),
+                        const Text(
                           "Welcome! Let's dive into your account!",
                           style: TextStyle(
                             color: Colors.black,
@@ -48,15 +50,15 @@ class _LoginPageState extends State<LoginPage> {
                             wordSpacing: 2,
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
+                            backgroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50),
                             ),
-                            fixedSize: Size(450, 50),
+                            fixedSize: const Size(450, 50),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -66,8 +68,8 @@ class _LoginPageState extends State<LoginPage> {
                                 width: 30,
                                 height: 30,
                               ),
-                              SizedBox(width: 10),
-                              Text(
+                              const SizedBox(width: 10),
+                              const Text(
                                 "Continue with Google",
                                 style: TextStyle(
                                   color: Colors.black,
@@ -78,17 +80,17 @@ class _LoginPageState extends State<LoginPage> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 30.0),
+                        const SizedBox(height: 30.0),
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
+                            backgroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50),
                             ),
-                            fixedSize: Size(450, 50),
+                            fixedSize: const Size(450, 50),
                           ),
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(
@@ -107,15 +109,15 @@ class _LoginPageState extends State<LoginPage> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 30.0),
+                        const SizedBox(height: 30.0),
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
+                            backgroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50),
                             ),
-                            fixedSize: Size(450, 50),
+                            fixedSize: const Size(450, 50),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -125,8 +127,8 @@ class _LoginPageState extends State<LoginPage> {
                                 width: 30,
                                 height: 30,
                               ),
-                              SizedBox(width: 10),
-                              Text(
+                              const SizedBox(width: 10),
+                              const Text(
                                 "Continue with Facebook",
                                 style: TextStyle(
                                   color: Colors.black,
@@ -137,15 +139,15 @@ class _LoginPageState extends State<LoginPage> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 30.0),
+                        const SizedBox(height: 30.0),
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
+                            backgroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(50),
                             ),
-                            fixedSize: Size(450, 50),
+                            fixedSize: const Size(450, 50),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -155,8 +157,8 @@ class _LoginPageState extends State<LoginPage> {
                                 width: 40,
                                 height: 40,
                               ),
-                              SizedBox(width: 10),
-                              Text(
+                              const SizedBox(width: 10),
+                              const Text(
                                 "Continue with Twitter",
                                 style: TextStyle(
                                   color: Colors.black,
@@ -167,25 +169,25 @@ class _LoginPageState extends State<LoginPage> {
                             ],
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 35.0,
                         ),
                         Material(
-                          color: Color(0xFF9610FF),
+                          color: const Color(0xFF9610FF),
                           borderRadius: BorderRadius.circular(50),
                           child: InkWell(
                             onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => SignupPage(),
+                                  builder: (context) => const SignupPage(),
                                 ),
                               );
                             },
                             child: Container(
-                              padding: EdgeInsets.symmetric(
-                                  vertical: 15, horizontal: 150),
-                              child: Text(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 15, horizontal: 100),
+                              child: const Text(
                                 "Sign in with password",
                                 style: TextStyle(
                                   color: Colors.white,
@@ -196,13 +198,13 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 40.0,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
+                            const Text(
                               "Don't have an account? ",
                               style: TextStyle(
                                 color: Colors.black,
@@ -215,11 +217,11 @@ class _LoginPageState extends State<LoginPage> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => personalInfoSignUpPage(),
+                                    builder: (context) => const personalInfoSignUpPage(),
                                   ),
                                 );
                               },
-                              child: Text(
+                              child: const Text(
                                 "Sign up",
                                 style: TextStyle(
                                   color: Color(0xFF9610FF),
