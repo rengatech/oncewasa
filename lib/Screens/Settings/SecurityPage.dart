@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SecurityPage extends StatefulWidget {
+  const SecurityPage({super.key});
+
   @override
   _SecurityPageState createState() => _SecurityPageState();
 }
@@ -17,7 +19,7 @@ class _SecurityPageState extends State<SecurityPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text('Security', textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+        title: const Text('Security', textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
       ),
       backgroundColor: Colors.white,
@@ -25,7 +27,7 @@ class _SecurityPageState extends State<SecurityPage> {
         child: Column(
           children: [
             ListTile(
-              title: Text('Remember me',  style: TextStyle(
+              title: const Text('Remember me',  style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),),
@@ -36,14 +38,14 @@ class _SecurityPageState extends State<SecurityPage> {
                     isRememberEnabled = value;
                   });
                 },
-                activeColor: Color(0xFF9610FF), 
+                activeColor: const Color(0xFF9610FF), 
                  inactiveThumbColor: Colors.white,
                 inactiveTrackColor: Colors.grey[300],
               ),
             ),
-            SizedBox(height: 20.0,),
+            const SizedBox(height: 20.0,),
               ListTile(
-              title: Text('Biometric ID',  style: TextStyle(
+              title: const Text('Biometric ID',  style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),),
@@ -54,14 +56,14 @@ class _SecurityPageState extends State<SecurityPage> {
                     isBiometricIdEnabled = value;
                   });
                 },
-                activeColor: Color(0xFF9610FF), 
+                activeColor: const Color(0xFF9610FF), 
                  inactiveThumbColor: Colors.white,
                 inactiveTrackColor: Colors.grey[300],
               ),
             ),
-               SizedBox(height: 20.0,),
+               const SizedBox(height: 20.0,),
               ListTile(
-              title: Text('Face ID',  style: TextStyle(
+              title: const Text('Face ID',  style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),),
@@ -72,14 +74,14 @@ class _SecurityPageState extends State<SecurityPage> {
                     isfaceIdEnabled = value;
                   });
                 },
-                activeColor: Color(0xFF9610FF),
+                activeColor: const Color(0xFF9610FF),
                  inactiveThumbColor: Colors.white,
                 inactiveTrackColor: Colors.grey[300],
               ),
             ),
-               SizedBox(height: 20.0,),
+               const SizedBox(height: 20.0,),
               ListTile(
-              title: Text('SMS Authenticator',  style: TextStyle(
+              title: const Text('SMS Authenticator',  style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),),
@@ -90,14 +92,14 @@ class _SecurityPageState extends State<SecurityPage> {
                     isSMSEnabled = value;
                   });
                 },
-                activeColor: Color(0xFF9610FF), 
+                activeColor: const Color(0xFF9610FF), 
                  inactiveThumbColor: Colors.white,
                 inactiveTrackColor: Colors.grey[300],
               ),
             ),
-               SizedBox(height: 20.0,),
+               const SizedBox(height: 20.0,),
               ListTile(
-              title: Text('Google Authenticator',  style: TextStyle(
+              title: const Text('Google Authenticator',  style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),),
@@ -108,14 +110,14 @@ class _SecurityPageState extends State<SecurityPage> {
                     isGoogleEnabled = value;
                   });
                 },
-                activeColor: Color(0xFF9610FF), 
+                activeColor: const Color(0xFF9610FF), 
                  inactiveThumbColor: Colors.white,
                 inactiveTrackColor: Colors.grey[300],
               ),
             ),
-            SizedBox(height: 20.0,),
+            const SizedBox(height: 20.0,),
              ListTile(
-                title: Row(
+                title: const Row(
                   children: [
                     Text(
                       'Device Management',
@@ -126,14 +128,14 @@ class _SecurityPageState extends State<SecurityPage> {
                     ),
                   ],
                 ),
-                trailing: Icon(Icons.arrow_forward_ios),
+                trailing: const Icon(Icons.arrow_forward_ios),
                 onTap: () {
                   // Handle tap on Settings
                 },
               ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
                  Material(
-                  color: Color(0xFFF5E7FF),
+                  color: const Color(0xFFF5E7FF),
                   borderRadius: BorderRadius.circular(50),
                   child: InkWell(
                     onTap: () {
@@ -141,8 +143,8 @@ class _SecurityPageState extends State<SecurityPage> {
                     },
                     child: Container(
                       padding:
-                          EdgeInsets.symmetric(vertical: 15, horizontal: 170),
-                      child: Text(
+                          const EdgeInsets.symmetric(vertical: 15, horizontal: 170),
+                      child: const Text(
                         "Change Password",
                         style: TextStyle(
                           color: Color(0xFF9610FF),

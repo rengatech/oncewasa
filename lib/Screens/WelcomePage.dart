@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:oncewasa/Screens/BookDetailsPage.dart';
+import 'package:oncewasa/Screens/BookGeneration/BookDetailsPage.dart';
 import 'package:oncewasa/Screens/Settings/SettingsPage.dart';
 
 class WelcomePage extends StatelessWidget {
+  const WelcomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,28 +18,28 @@ class WelcomePage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => SettingsPage()), 
+                  MaterialPageRoute(builder: (context) => const SettingsPage()), 
                 );
               },
-              child: CircleAvatar(
+              child: const CircleAvatar(
                 backgroundImage: AssetImage('images/profile.png'),
               ),
             ),
-            SizedBox(width: 10),
+            const SizedBox(width: 5),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
-                    Text('Welcome back'),
-                    Image.asset(
-                      "images/hand.png",
-                      width: 20,
-                      height: 20,
-                    ),
+                    const Text('Welcome back'),
+                    // Image.asset(
+                    //   "images/hand.png",
+                    //   width: 20,
+                    //   height: 20,
+                    // ),
                   ],
                 ),
-                Text(
+                const Text(
                   'Andrew Perry',
                   style: TextStyle(fontSize: 14.0),
                 ),
@@ -47,7 +49,7 @@ class WelcomePage extends StatelessWidget {
         ),
         actions: [
           Image.asset(
-            "images/frame.png",
+            "images/Frame.png",
             width: 100,
             height: 100,
           ),
@@ -60,7 +62,7 @@ class WelcomePage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -69,7 +71,7 @@ class WelcomePage extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => BookDetailsPage()),
+                    MaterialPageRoute(builder: (context) => const BookDetailsPage()),
                   );
                 },
                 child: Image.asset(
@@ -79,7 +81,7 @@ class WelcomePage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -90,7 +92,7 @@ class WelcomePage extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Expanded(
                     child: Image.asset(
                       "images/2_Story.png",
@@ -100,7 +102,7 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -111,7 +113,7 @@ class WelcomePage extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Expanded(
                     child: Image.asset(
                       "images/4_Story.png",
@@ -121,7 +123,7 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ],
               ),
-               SizedBox(height: 10),
+               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -132,7 +134,7 @@ class WelcomePage extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Expanded(
                     child: Image.asset(
                       "images/6_Story.png",

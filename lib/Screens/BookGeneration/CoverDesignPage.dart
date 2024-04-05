@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:oncewasa/Screens/TitlePage.dart';
+import 'package:oncewasa/Screens/BookGeneration/TitlePage.dart';
 
 class CoverDesignPage extends StatelessWidget {
   final List<String> imagePaths = [
@@ -9,13 +9,15 @@ class CoverDesignPage extends StatelessWidget {
     'images/story2.png',
   ];
 
+  // const CoverDesignPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text("Cover Designs",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+        title: const Text("Cover Designs",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
       ),
       body: Padding(
@@ -29,7 +31,7 @@ class CoverDesignPage extends StatelessWidget {
                 color: Colors.grey[300],
                 borderRadius: BorderRadius.circular(30.0),
               ),
-              child: Center(
+              child: const Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -50,12 +52,12 @@ class CoverDesignPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             GridView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: imagePaths.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 4,
                 crossAxisSpacing: 5.0,
                 mainAxisSpacing: 5.0,
@@ -65,28 +67,28 @@ class CoverDesignPage extends StatelessWidget {
                     imagePaths[index], 'Cover ${index + 1}');
               },
             ),
-            SizedBox(height: 50.0),
-            Divider(
+            const SizedBox(height: 50.0),
+            const Divider(
               height: 0.5,
-              color: const Color.fromARGB(255, 245, 242, 242),
+              color: Color.fromARGB(255, 245, 242, 242),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => TitlePage(),
+                    builder: (context) => const TitlePage(),
                   ),
                 );
               },
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Color(0xFF9610FF),
+                  color: const Color(0xFF9610FF),
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
@@ -108,19 +110,22 @@ class CoverDesignPage extends StatelessWidget {
   }
 
   Widget _buildImage(String imagePath, String imageName) {
-    return Column(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: Column(
       children: [
         Image.asset(
           imagePath,
           height: 80.0,
           width: 150.0,
         ),
-        SizedBox(height: 5.0),
+        const SizedBox(height: 5.0),
         Text(
           imageName,
-          style: TextStyle(fontSize: 16.0),
+          style: const TextStyle(fontSize: 16.0),
         ),
       ],
+      ),
     );
   }
 }

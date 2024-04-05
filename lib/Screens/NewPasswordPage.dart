@@ -3,6 +3,8 @@ import 'package:oncewasa/Screens/WelcomePage.dart';
 
 
 class NewPasswordPage extends StatelessWidget {
+  const NewPasswordPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +12,7 @@ class NewPasswordPage extends StatelessWidget {
         backgroundColor: Colors.white,
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Center(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -18,13 +20,13 @@ class NewPasswordPage extends StatelessWidget {
             children: [
               RichText(
                 text: TextSpan(
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
                   children: [
-                    TextSpan(
+                    const TextSpan(
                       text: 'Create new password',
                     ),
                     WidgetSpan(
@@ -37,15 +39,15 @@ class NewPasswordPage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 16.0),
-              Text(
+              const SizedBox(height: 16.0),
+              const Text(
                 'Create you new password. If you forget it. Then you how to do forgot password.',
                 style: TextStyle(
                   fontSize: 15,
                 ),
               ),
-              SizedBox(height: 40),
-               TextField(
+              const SizedBox(height: 40),
+               const TextField(
                 decoration: InputDecoration(
                   labelText: 'New Password',
                   // hintText: 'Password',
@@ -55,8 +57,8 @@ class NewPasswordPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 40,),
-               TextField(
+              const SizedBox(height: 40,),
+               const TextField(
                 decoration: InputDecoration(
                   labelText: 'Confirm New Password',
                   // hintText: 'Password',
@@ -66,21 +68,21 @@ class NewPasswordPage extends StatelessWidget {
                   ),
                 ),
               ),
-                SizedBox(height: 400,),
-              Divider(height:0.1, color: const Color.fromARGB(255, 245, 242, 242),),
-               SizedBox(height: 16.0,),
+                const SizedBox(height: 80,),
+              const Divider(height:0.1, color: Color.fromARGB(255, 245, 242, 242),),
+               const SizedBox(height: 16.0,),
                  Center(
                 child: ElevatedButton(
                   onPressed: () { _showSignInPopup(context); },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF9610FF),
+                    backgroundColor: const Color(0xFF9610FF),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(90),
                     ),
                   ),
-                  child: Padding(
+                  child: const Padding(
                     padding:
-                        EdgeInsets.symmetric(vertical: 12, horizontal: 150),
+                        EdgeInsets.symmetric(vertical: 12, horizontal: 110),
                     child: Text(
                       'Continue',
                       style: TextStyle(fontSize: 18, color: Colors.white),
@@ -106,7 +108,7 @@ void _showSignInPopup(BuildContext context) {
         title: Center(
           child: Image.asset("images/lockpubble.png"),
         ),
-        content: Container(
+        content: const SizedBox(
           height: 250.0,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -150,12 +152,12 @@ void _showSignInPopup(BuildContext context) {
   );
 
  
-  Future.delayed(Duration(seconds: 2), () {
+  Future.delayed(const Duration(seconds: 2), () {
 
   Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => WelcomePage(),
+        builder: (context) => const WelcomePage(),
       ),
     );
   });

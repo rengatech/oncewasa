@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:oncewasa/Screens/Settings/SettingsPage.dart';
 
 class ReviewSummaryPage extends StatelessWidget {
+  const ReviewSummaryPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Review Summary",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+        title: const Text("Review Summary",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
          centerTitle: true,
         backgroundColor: Colors.white,
       ),
@@ -20,25 +22,25 @@ class ReviewSummaryPage extends StatelessWidget {
             Container(
               height: 100,
               decoration: BoxDecoration(
-                boxShadow: [],
+                boxShadow: const [],
                 color: const Color(0xFFFAFAFA),
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           'Subscription',
                           style: TextStyle(fontSize: 16),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           '6 months',
                           style: TextStyle(
@@ -51,14 +53,14 @@ class ReviewSummaryPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           'Price',
                           style: TextStyle(fontSize: 16),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           '\$24.00',
                           style: TextStyle(
@@ -70,31 +72,31 @@ class ReviewSummaryPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16.0,
             ),
             Container(
               height: 150,
               decoration: BoxDecoration(
-                boxShadow: [],
+                boxShadow: const [],
                 color: const Color(0xFFFAFAFA),
                 borderRadius: BorderRadius.circular(8.0),
               ),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           'Amount',
                           style: TextStyle(fontSize: 16),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           '\$24.00',
                           style: TextStyle(
@@ -107,14 +109,14 @@ class ReviewSummaryPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           'Tax',
                           style: TextStyle(fontSize: 16),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           '\$1.00',
                           style: TextStyle(
@@ -125,20 +127,20 @@ class ReviewSummaryPage extends StatelessWidget {
                   ),
                   Divider(
                     height: 0.1,
-                    color: const Color.fromARGB(255, 245, 242, 242),
+                    color: Color.fromARGB(255, 245, 242, 242),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           'Total Amount',
                           style: TextStyle(fontSize: 16),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           '\$25.00',
                           style: TextStyle(
@@ -150,27 +152,27 @@ class ReviewSummaryPage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
-              height: 16.0,
+            const SizedBox(
+              height: 20.0,
             ),
-            Text(
+            const Text(
               'Selected Payment method',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                   fontSize: 16.0),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16.0,
             ),
             Container(
               decoration: BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                    color: Color.fromARGB(255, 229, 228, 228).withOpacity(0.5),
+                    color: const Color.fromARGB(255, 229, 228, 228).withOpacity(0.5),
                     spreadRadius: 3,
                     blurRadius: 7,
-                    offset: Offset(0, 3),
+                    offset: const Offset(0, 3),
                   ),
                 ],
                 color: const Color(0xFFFAFAFA),
@@ -190,20 +192,20 @@ class ReviewSummaryPage extends StatelessWidget {
                           width: 50,
                           height: 50,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 20.0,
                           height: 50.0,
                         ),
-                        Text(
+                        const Text(
                           '.... .... .... .... 5567',
                           style: TextStyle(
                               color: Colors.black, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(
-                          width: 200.0,
+                        const SizedBox(
+                          width: 100.0,
                           height: 50.0,
                         ),
-                        Text(
+                        const Text(
                           'Change',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -215,14 +217,14 @@ class ReviewSummaryPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
-              height: 300.0,
+            const SizedBox(
+              height: 100.0,
             ),
-            Divider(
+            const Divider(
               height: 0.1,
-              color: const Color.fromARGB(255, 245, 242, 242),
+              color: Color.fromARGB(255, 245, 242, 242),
             ),
-            SizedBox(
+            const SizedBox(
               height: 16.0,
             ),
             ElevatedButton(
@@ -230,13 +232,13 @@ class ReviewSummaryPage extends StatelessWidget {
                 _showPaymentPopup(context);
               },
               style: ElevatedButton.styleFrom(
-                primary: Color(0xFF9610FF),
+                backgroundColor: const Color(0xFF9610FF),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(90),
                 ),
               ),
-              child: Padding(
-                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 150),
+              child: const Padding(
+                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 90),
                 child: Text(
                   'Confirm payment',
                   style: TextStyle(fontSize: 15, color: Colors.white),
@@ -264,13 +266,13 @@ void _showPaymentPopup(BuildContext context) {
         title: Center(
           child: Image.asset("images/crown.png"),
         ),
-        content: Container(
+        content: SizedBox(
           height: 250.0,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Center(
+              const Center(
                 child: Text(
                   "Welcome to PRO Plan!",
                   style: TextStyle(
@@ -279,13 +281,13 @@ void _showPaymentPopup(BuildContext context) {
                       fontWeight: FontWeight.bold),
                 ),
               ),
-              SizedBox(height: 16.0),
-              SizedBox(height: 16.0),
-              Center(
+              const SizedBox(height: 16.0),
+              const SizedBox(height: 16.0),
+              const Center(
                 child: Text(
                     "You have successfully subscribed Pro for 6 months! E-Receipt has been sent to your email address.Enjoy all the benefits!"),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16.0,
               ),
               ElevatedButton(
@@ -293,17 +295,17 @@ void _showPaymentPopup(BuildContext context) {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => SettingsPage(),
+                      builder: (context) => const SettingsPage(),
                     ),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Color(0xFF9610FF),
+                  backgroundColor: const Color(0xFF9610FF),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(90),
                   ),
                 ),
-                child: Padding(
+                child: const Padding(
                   padding: EdgeInsets.symmetric(vertical: 12, horizontal: 80),
                   child: Text(
                     'Ok',

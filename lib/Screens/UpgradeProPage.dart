@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:oncewasa/Screens/PlanPage.dart';
 
 class UpgradeProPage extends StatelessWidget {
+  const UpgradeProPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
       ),
+      
       body: Stack(
         children: [
           // Background Image
@@ -26,8 +29,8 @@ class UpgradeProPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  margin: EdgeInsets.all(20),
-                  decoration: BoxDecoration(
+                  margin: const EdgeInsets.all(20),
+                  decoration: const BoxDecoration(
                     // border: Border.all(color: Colors.grey),
                   ),
                   child: Padding(
@@ -38,29 +41,29 @@ class UpgradeProPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Divider(
+                const Divider(
                   height: 0.1,
-                  color: const Color.fromARGB(255, 245, 242, 242),
+                  color: Color.fromARGB(255, 245, 242, 242),
                 ),
-                SizedBox(height: 16.0),
+             
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => PlanPage(),
+                        builder: (context) => const PlanPage(),
                       ),
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF9610FF),
+                    backgroundColor: const Color(0xFF9610FF),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(90),
                     ),
                   ),
-                  child: Padding(
+                  child: const Padding(
                     padding:
-                        EdgeInsets.symmetric(vertical: 12, horizontal: 150),
+                        EdgeInsets.symmetric(vertical: 12, horizontal: 100),
                     child: Text(
                       'Upgrade to PRO',
                       style: TextStyle(fontSize: 18, color: Colors.white),
@@ -72,7 +75,7 @@ class UpgradeProPage extends StatelessWidget {
           ),
         ],
       ),
-      backgroundColor: Colors.transparent, 
+      backgroundColor: Colors.white, 
     );
   }
 }

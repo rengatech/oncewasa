@@ -1,119 +1,142 @@
 import 'package:flutter/material.dart';
-import 'package:oncewasa/Screens/ContentsPage1.dart';
+import 'package:oncewasa/Screens/BookGeneration/PromptPage.dart';
 
-class BookDetailsPage extends StatelessWidget {
+class TitlePage extends StatelessWidget {
+  const TitlePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: Text("Add Details",textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
-         centerTitle: true,
-      ),
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text('Title for Page',textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+         centerTitle: true,
+        backgroundColor: Colors.white,
+      ),
+
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "Book Title",
+            const Text(
+              "Chapter Number",
               style: TextStyle(
                 fontSize: 15,
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 10),
-            TextField(
+            const SizedBox(height: 10),
+            const TextField(
               decoration: InputDecoration(
-                hintText: " Title",
+                hintText: " description...",
                 border: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey),
                 ),
                  contentPadding: EdgeInsets.symmetric(vertical: 2,horizontal: 2), 
               ),
             ),
-            SizedBox(height: 20),
-            Text(
-              "Author Name",
+            const SizedBox(height: 20),
+            const Text(
+              "Page Number",
               style: TextStyle(
                 fontSize: 15,
-              color: Colors.black,
+                color: Colors.black,
               ),
             ),
-            SizedBox(height: 10),
-            TextField(
+            const SizedBox(height: 10),
+            const TextField(
               decoration: InputDecoration(
-                hintText: " Author Name",
+                hintText: " description...",
                 border: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey),
                 ),
                  contentPadding: EdgeInsets.symmetric(vertical: 2,horizontal: 2),  
               ),
             ),
-             SizedBox(height: 20),
-            Text(
-              "About Author",
+               const SizedBox(height: 20),
+            const Text(
+              "Principle Text",
               style: TextStyle(
                 fontSize: 15,
-               color: Colors.black,
+                color: Colors.black,
               ),
             ),
-            SizedBox(height: 10),
-            TextField(
-              maxLines: null, 
+            const SizedBox(height: 10),
+            const TextField(
               decoration: InputDecoration(
-                hintText: "  click to upload photo",
+                hintText: " description...",
                 border: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey),
                 ),
-                 contentPadding: EdgeInsets.symmetric(vertical: 100), 
+                 contentPadding: EdgeInsets.symmetric(vertical: 2,horizontal: 2),  
               ),
             ),
-            SizedBox(height: 20),
-            Text(
-              "About Author",
+           
+              const SizedBox(height: 20),
+            const Text(
+              "Generate Image",
               style: TextStyle(
                 fontSize: 15,
-                 color: Colors.black,
+                color: Colors.black,
               ),
             ),
-            SizedBox(height: 10),
-            TextField(
-              maxLines: null, 
+            const SizedBox(height: 10),
+            const TextField(
               decoration: InputDecoration(
-                hintText: " About...",
+                hintText: " description...",
                 border: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey),
                 ),
-                 contentPadding: EdgeInsets.symmetric(vertical: 100), 
+                 contentPadding: EdgeInsets.symmetric(vertical: 2,horizontal: 2),  
               ),
             ),
-            SizedBox(height: 30.0),
-               Divider(
-                height: 0.5,color: const Color.fromARGB(255, 245, 242, 242),
+           
+              const SizedBox(height: 20),
+            const Text(
+              "Generate Illustration",
+              style: TextStyle(
+                fontSize: 15,
+                color: Colors.black,
               ),
-              SizedBox(height: 16.0),
+            ),
+            const SizedBox(height: 10),
+            const TextField(
+              decoration: InputDecoration(
+                hintText: " description...",
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
+                 contentPadding: EdgeInsets.symmetric(vertical: 2,horizontal: 2),  
+              ),
+            ),
+           
+           
+            const SizedBox(height: 100.0),
+               const Divider(
+                height: 0.5,color: Color.fromARGB(255, 245, 242, 242),
+              ),
+              const SizedBox(height: 16.0),
             GestureDetector(
               onTap: () {
                   Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>ContentsPage1(),
+                          builder: (context) => const PromptPage(),
                         ),
                       );
               },
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  color: Color(0xFF9610FF),
+                  color: const Color(0xFF9610FF),
                   borderRadius: BorderRadius.circular(5.0),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Contents",
+                      "Generate Prompt For Cover Design",
                       style: TextStyle(
                         color: Colors.white, 
                         fontWeight: FontWeight.bold,
@@ -130,3 +153,5 @@ class BookDetailsPage extends StatelessWidget {
     );
   }
 }
+
+

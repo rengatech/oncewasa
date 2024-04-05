@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:oncewasa/Screens/LoginPage.dart';
 
 class HomePage3 extends StatefulWidget {
+  const HomePage3({super.key});
+
   @override
   _HomePage3State createState() => _HomePage3State();
 }
@@ -17,7 +19,7 @@ class _HomePage3State extends State<HomePage3> {
         color: Colors.white,
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
           children: [
             Expanded(
@@ -40,30 +42,30 @@ class _HomePage3State extends State<HomePage3> {
                             width: 500,
                             height: 500,
                           ),
-                          SizedBox(height: 20),
-                          Text(
+                          const SizedBox(height: 20),
+                          const Text(
                             "Enjoy all the benefits with",
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 35,
+                              fontSize: 25,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 1,
                               wordSpacing: 2,
                             ),
                           ),
-                          SizedBox(height: 10),
-                          Text(
+                          const SizedBox(height: 10),
+                          const Text(
                             "pro subscriptions",
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 35,
+                              fontSize: 25,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 1,
                               wordSpacing: 2,
                             ),
                           ),
-                          SizedBox(height: 10),
-                          Text(
+                          const SizedBox(height: 10),
+                          const Text(
                             "Lorem ipsum dolor sit amet, consectetur . ",
                             style: TextStyle(
                               color: Colors.black54,
@@ -71,8 +73,8 @@ class _HomePage3State extends State<HomePage3> {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          SizedBox(height: 10),
-                          Text(
+                          const SizedBox(height: 10),
+                          const Text(
                             "Fugit ad iure accusantium veritatis ",
                             style: TextStyle(
                               color: Colors.black54,
@@ -88,13 +90,13 @@ class _HomePage3State extends State<HomePage3> {
                     mainAxisSize: MainAxisSize.min,
                     children: List.generate(3, (index) {
                       return Container(
-                        margin: EdgeInsets.symmetric(horizontal: 5.0),
+                        margin: const EdgeInsets.symmetric(horizontal: 5.0),
                         width: 10.0,
                         height: 10.0,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color: _currentPage == index
-                              ? Color(0xFF9610FF)
+                              ? const Color(0xFF9610FF)
                               : Colors.grey,
                         ),
                       );
@@ -103,26 +105,26 @@ class _HomePage3State extends State<HomePage3> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Material(
-                  color: Color(0xFF9610FF),
+                  color: const Color(0xFF9610FF),
                   borderRadius: BorderRadius.circular(50),
                   child: InkWell(
                     onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => LoginPage(),
+                          builder: (context) => const LoginPage(),
                         ),
                       );
                     },
                     child: Container(
                       padding:
-                          EdgeInsets.symmetric(vertical: 15, horizontal: 200),
-                      child: Text(
+                          const EdgeInsets.symmetric(vertical: 15, horizontal: 100),
+                      child: const Text(
                         "Get Started",
                         style: TextStyle(
                           color: Colors.white,

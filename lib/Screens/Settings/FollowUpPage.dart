@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class FollowUpPage extends StatefulWidget {
+  const FollowUpPage({super.key});
+
   @override
   _FollowUpPageState createState() => _FollowUpPageState();
 }
@@ -12,7 +14,7 @@ class _FollowUpPageState extends State<FollowUpPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Text('Follow us on Social Media', textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
+        title: const Text('Follow us on Social Media', textAlign: TextAlign.center,style: TextStyle(fontWeight: FontWeight.bold),),
         centerTitle: true,
       ),
       backgroundColor: Colors.white,
@@ -22,15 +24,15 @@ class _FollowUpPageState extends State<FollowUpPage> {
           children: [
             //image and text for container
             buildPaymentMethod('images/twitter.png', 'Twitter'),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             buildPaymentMethod('images/insta.png', 'Instagram'),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             buildPaymentMethod('images/discord.png', 'Discord'),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             buildPaymentMethod('images/reddt.png', 'Reddt'),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             buildPaymentMethod('images/youtube.png', 'YouTube'),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
              buildPaymentMethod('images/tele.png', 'Telegram'),
           ],
         ),
@@ -40,7 +42,7 @@ class _FollowUpPageState extends State<FollowUpPage> {
    Widget buildPaymentMethod(String imageAsset, String label) {
     return Expanded(
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0),
+        padding: const EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0),
         child: GestureDetector(
           child: Container(
             height: 90,
@@ -59,17 +61,17 @@ class _FollowUpPageState extends State<FollowUpPage> {
                     height: 50,
                   ),
                 ),
-                SizedBox(width: 10),
+                const SizedBox(width: 10),
                 Text(
                   label,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                Spacer(),
-                 Padding(
-                padding: const EdgeInsets.only(right: 20.0),
+                const Spacer(),
+                 const Padding(
+                padding: EdgeInsets.only(right: 20.0),
                 child: Icon(Icons.arrow_forward_ios, size: 20,),
               ),
               ],

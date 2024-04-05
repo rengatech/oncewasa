@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:oncewasa/Screens/NewPasswordPage.dart';
 
 class Otppage extends StatefulWidget {
+  const Otppage({super.key});
+
   @override
   _OtppageState createState() => _OtppageState();
 }
@@ -47,7 +49,7 @@ class _OtppageState extends State<Otppage> {
       // Navigate to the next screen
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => NewPasswordPage()),
+        MaterialPageRoute(builder: (context) => const NewPasswordPage()),
       );
     }
   }
@@ -68,7 +70,7 @@ class _OtppageState extends State<Otppage> {
             Expanded(
               child: SingleChildScrollView(
                 child: Padding(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   child: Center(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,13 +78,13 @@ class _OtppageState extends State<Otppage> {
                       children: [
                         RichText(
                           text: TextSpan(
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 40,
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
                             ),
                             children: [
-                              TextSpan(
+                              const TextSpan(
                                 text: 'OTP code verification',
                               ),
                               WidgetSpan(
@@ -95,19 +97,19 @@ class _OtppageState extends State<Otppage> {
                             ],
                           ),
                         ),
-                        SizedBox(height: 16.0),
-                        Text(
+                        const SizedBox(height: 16.0),
+                        const Text(
                           'We have sent an OTP code to your email and ******yourdomain.com. Enter the OTP code below to verify',
                           style: TextStyle(
                             fontSize: 15,
                           ),
                         ),
-                        SizedBox(height: 80.0),
+                        const SizedBox(height: 80.0),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: List.generate(4, (index) {
                             return Padding(
-                              padding: EdgeInsets.symmetric(horizontal: 8.0),
+                              padding: const EdgeInsets.symmetric(horizontal: 8.0),
                               child: SizedBox(
                                 height: 68,
                                 width: 64,
@@ -115,11 +117,11 @@ class _OtppageState extends State<Otppage> {
                                   focusNode: _focusNodes[index],
                                   controller: _controllers[index],
                                   style:
-                                      Theme.of(context).textTheme.headline6,
+                                      Theme.of(context).textTheme.titleLarge,
                                   keyboardType: TextInputType.number,
                                   textAlign: TextAlign.center,
                                   readOnly: true,
-                                  decoration: InputDecoration(
+                                  decoration: const InputDecoration(
                                     border: OutlineInputBorder(),
                                     contentPadding: EdgeInsets.zero,
                                   ),
@@ -128,8 +130,8 @@ class _OtppageState extends State<Otppage> {
                             );
                           }),
                         ),
-                        SizedBox(height: 20),
-                        Center(
+                        const SizedBox(height: 20),
+                        const Center(
                           child: Column(
                             children: [
                               Text("Didn't receive email?"),
@@ -163,7 +165,7 @@ class _OtppageState extends State<Otppage> {
 class NumericKeyboard extends StatelessWidget {
   final Function(String) onKeyboardTap;
 
-  NumericKeyboard({required this.onKeyboardTap});
+  NumericKeyboard({super.key, required this.onKeyboardTap});
 
   final List<String> _keys = [
     '1',
@@ -183,8 +185,8 @@ class NumericKeyboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
-      color: Color.fromARGB(255, 250, 248, 248),
+      padding: const EdgeInsets.all(10),
+      color: const Color.fromARGB(255, 250, 248, 248),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -200,7 +202,7 @@ class NumericKeyboard extends StatelessWidget {
                 ),
             ],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -213,7 +215,7 @@ class NumericKeyboard extends StatelessWidget {
                 ),
             ],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -226,7 +228,7 @@ class NumericKeyboard extends StatelessWidget {
                 ),
             ],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -259,17 +261,17 @@ class NumericKeyboard extends StatelessWidget {
 class NumericKey extends StatelessWidget {
   final String keyText;
 
-  NumericKey(this.keyText);
+  const NumericKey(this.keyText, {super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 100,
       width: 70,
       child: Center(
         child: Text(
           keyText,
-          style: TextStyle(fontSize: 24, color: Colors.black),
+          style: const TextStyle(fontSize: 24, color: Colors.black),
         ),
       ),
     );
