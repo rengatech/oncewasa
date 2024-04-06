@@ -25,13 +25,13 @@ class _PaymentMethodsPageState extends State<PaymentMethodsPage> {
           children: [
             //image and text for container
             buildPaymentMethod('images/paypal.png', 'PayPal'),
-            const SizedBox(height: 30.0),
+            const SizedBox(height: 10.0),
             buildPaymentMethod('images/google.png', 'Google Pay'),
-            const SizedBox(height: 30.0),
+            const SizedBox(height: 10.0),
             buildPaymentMethod('images/apple.png', 'Apple Pay'),
-            const SizedBox(height: 30.0),
+            const SizedBox(height: 10.0),
                buildPaymentMethod('images/visa.png', '.... .... .... .... 5567'),
-            const SizedBox(height: 30.0),
+            const SizedBox(height: 10.0),
             buildPaymentMethod('images/express.png', '.... .... .... .... 7864'),
             const SizedBox(height: 100.0),
             const Divider(
@@ -55,10 +55,10 @@ class _PaymentMethodsPageState extends State<PaymentMethodsPage> {
                 ),
               ),
               child: const Padding(
-                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 110),
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 110),
                 child: Text(
                   'Add New Payment',
-                  style: TextStyle(fontSize: 10, color: Colors.white),
+                  style: TextStyle(fontSize: 11, color: Colors.white),
                 ),
               ),
             ),
@@ -96,7 +96,7 @@ class _PaymentMethodsPageState extends State<PaymentMethodsPage> {
                     height: 30,
                   ),
                 ),
-                const SizedBox(width: 10),
+                // const SizedBox(),
                 Text(
                   label,
                   style: const TextStyle(
@@ -113,7 +113,7 @@ class _PaymentMethodsPageState extends State<PaymentMethodsPage> {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                           const SizedBox(width: 20),
+                           const SizedBox(width: 5),
               ],
             ),
           ),

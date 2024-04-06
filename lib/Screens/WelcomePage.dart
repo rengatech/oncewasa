@@ -32,11 +32,11 @@ class WelcomePage extends StatelessWidget {
                 Row(
                   children: [
                     const Text('Welcome back'),
-                    // Image.asset(
-                    //   "images/hand.png",
-                    //   width: 20,
-                    //   height: 20,
-                    // ),
+                    Image.asset(
+                      "images/hand.png",
+                      width: 22,
+                      height: 20,
+                    ),
                   ],
                 ),
                 const Text(
@@ -50,7 +50,7 @@ class WelcomePage extends StatelessWidget {
         actions: [
           Image.asset(
             "images/Frame.png",
-            width: 100,
+            width: 50,
             height: 100,
           ),
           Image.asset(

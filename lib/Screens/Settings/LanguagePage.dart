@@ -39,21 +39,21 @@ class _LanguagePageState extends State<LanguagePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(20.0),
               child:Row(
                 children: [
                   Text(
                     'Suggested',
                     style: TextStyle(fontSize: 16, color: Colors.grey),
                   ),
-                  SizedBox(width: 15.0,),
-                  Expanded(
-                    child: Divider(
-                      color: Color.fromARGB(255, 233, 232, 232),
-                      height: 20,
-                      thickness: 1,
-                    ),
-                  ),
+                  // SizedBox(width: 15.0,),
+                  // Expanded(
+                  //   child: Divider(
+                  //     color: Colors.black,
+                  //     height: 20,
+                  //     thickness: 1,
+                  //   ),
+                  // ),
                 ],
               ),
             ),
@@ -79,21 +79,21 @@ class _LanguagePageState extends State<LanguagePage> {
               },
             ),
             const Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(20.0),
             child:Row(
                 children: [
                   Text(
                     'Languages',
                     style: TextStyle(fontSize: 16, color: Colors.grey),
                   ),
-                  SizedBox(width: 15.0,),
-                  Expanded(
-                    child: Divider(
-                      color: Color.fromARGB(255, 233, 232, 232),
-                      height: 20,
-                      thickness: 1,
-                    ),
-                  ),
+                  // SizedBox(width: 15.0,),
+                  // Expanded(
+                  //   child: Divider(
+                  //     color: Colors.black,
+                  //     height: 20,
+                  //     thickness: 1,
+                  //   ),
+                  // ),
                 ],
               ),
             ),

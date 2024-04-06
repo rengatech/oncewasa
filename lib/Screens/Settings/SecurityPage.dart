@@ -143,12 +143,12 @@ class _SecurityPageState extends State<SecurityPage> {
                     },
                     child: Container(
                       padding:
-                          const EdgeInsets.symmetric(vertical: 15, horizontal: 170),
+                          const EdgeInsets.symmetric(vertical: 18, horizontal: 125),
                       child: const Text(
                         "Change Password",
                         style: TextStyle(
                           color: Color(0xFF9610FF),
-                          fontSize: 12,
+                          fontSize: 13,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

@@ -33,7 +33,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
               RichText(
                 text: const TextSpan(
                   style: TextStyle(
-                    fontSize: 40,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
                   ),
@@ -55,7 +55,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
               const Text(
                 'Please enter your profile. Don\'t worry, only you can see your personal data. No one else will be able to see it. Or you can skip it for now.',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 16,
                 ),
               ),
               const SizedBox(height: 16.0),
@@ -92,7 +92,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                   ],
                 ),
               ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 2),
               const TextField(
                 decoration: InputDecoration(
                   labelText: 'Full Name',
@@ -101,7 +101,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                   contentPadding: EdgeInsets.symmetric(vertical: 25.0),
                 ),
               ),
-              const SizedBox(height: 16.0),
+              const SizedBox(height: 2.0),
               const TextField(
                 decoration: InputDecoration(
                   labelText: 'Phone Number',
@@ -114,7 +114,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                   contentPadding: EdgeInsets.symmetric(vertical: 25.0),
                 ),
               ),
-              const SizedBox(height: 16.0),
+              const SizedBox(height: 2.0),
               const TextField(
                 decoration: InputDecoration(
                   labelText: 'Date Of Birth',
@@ -127,7 +127,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                   contentPadding: EdgeInsets.symmetric(vertical: 25.0),
                 ),
               ),
-                 const SizedBox(height: 30.0),
+                 const SizedBox(height: 12.0),
                 // Gender Label and Radio Buttons
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 12.0),
@@ -170,7 +170,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 30.0),
+                const SizedBox(height: 20.0),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -182,7 +182,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                          _showSignInPopup(context);
                         },
                         child: Container(
-                          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 90),
+                          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 65),
                           child: const Text(
                             "Skip",
                             style: TextStyle(
@@ -202,7 +202,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
                          _showSignInPopup(context);
                         },
                         child: Container(
-                          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 80),
+                          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 50),
                           child: const Text(
                             "Continue",
                             style: TextStyle(
