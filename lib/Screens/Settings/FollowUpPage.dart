@@ -19,7 +19,7 @@ class _FollowUpPageState extends State<FollowUpPage> {
       ),
       backgroundColor: Colors.white,
       body:  Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
             //image and text for container
@@ -54,7 +54,7 @@ class _FollowUpPageState extends State<FollowUpPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 10.0, right: 30.0),
+                  padding: const EdgeInsets.only(left: 1.0, right: 1.0),
                   child: Image.asset(
                     imageAsset,
                     width: 50,

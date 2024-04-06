@@ -95,7 +95,7 @@ class personalInfoSignUpPage extends StatelessWidget {
                     'I agree OnceWasA ',
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 15,
+                      fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -107,7 +107,7 @@ class personalInfoSignUpPage extends StatelessWidget {
                       'Terms & Conditions',
                       style: TextStyle(
                         color: Color(0xFF9610FF),
-                        fontSize: 15,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -148,18 +148,18 @@ class personalInfoSignUpPage extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 20),
               const Center(
                 child: Text(
                   'Or continue with',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 12,
+                    fontSize: 15,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
-              const SizedBox(height: 40),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -175,8 +175,8 @@ class personalInfoSignUpPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Image.asset(
                         "images/google.png",
-                        width: 10,
-                        height: 50,
+                        width: 25,
+                        height: 70,
                       ),
                     ),
                   ),
@@ -189,9 +189,10 @@ class personalInfoSignUpPage extends StatelessWidget {
                       ),
                     ),
                     child: const Padding(
-                      padding: EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(2.0),
                       child: SizedBox(
-                        height: 10,
+                        height: 80,
+                        width: 30,
                         child: Icon(
                           Icons.apple,
                           color: Colors.black,
@@ -208,11 +209,11 @@ class personalInfoSignUpPage extends StatelessWidget {
                       ),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(6.0),
                       child: Image.asset(
                         "images/facebook.png",
-                        width: 10,
-                        height: 50,
+                        width: 25,
+                        height: 80,
                       ),
                     ),
                   ),
@@ -228,8 +229,8 @@ class personalInfoSignUpPage extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Image.asset(
                         "images/twitter.png",
-                        width: 10,
-                        height: 50,
+                        width: 40,
+                        height: 80,
                       ),
                     ),
                   ),

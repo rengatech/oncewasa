@@ -31,11 +31,11 @@ class HelpCenterPage extends StatelessWidget {
                   labelText: 'Search',
                   prefixIcon: Icon(Icons.search),
                   border: InputBorder.none,
-                  contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+                  contentPadding: EdgeInsets.symmetric(horizontal: 15, vertical: 12),
                 ),
               ),
             ),
-            SizedBox(height: 16.0),
+            SizedBox(height: 30.0),
             Text(
               'Frequently Asked Questions',
               style: TextStyle(
@@ -43,7 +43,7 @@ class HelpCenterPage extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 25),
             Steps(),
           ],
         ),

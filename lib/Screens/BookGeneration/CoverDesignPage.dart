@@ -83,7 +83,7 @@ class CoverDesignPage extends StatelessWidget {
                 );
               },
               child: Container(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: const Color(0xFF9610FF),
                   borderRadius: BorderRadius.circular(5.0),
